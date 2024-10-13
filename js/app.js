@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadCelestialBodies() {
-  fetch('data/celestialBodies.json')
+  fetch('data/celestialBodies.json') // JSON dosyanızın doğru yolu
       .then(response => response.json())
       .then(data => {
           const celestialBodies = data.celestialBodies;
@@ -25,10 +25,10 @@ function loadCelestialBodies() {
               destinationSelect.appendChild(option2);
           });
       })
-      .catch(error => console.error('Error:', error));
+      .catch(error => console.error('Error loading celestial bodies:', error));
 }
 
-// Plot ve Reset butonlarına fonksiyon ekle
+// Plot butonuna fonksiyon ekle
 document.getElementById('plot-btn').addEventListener('click', function() {
   const origin = document.getElementById('origin').value;
   const destination = document.getElementById('destination').value;
@@ -42,6 +42,7 @@ document.getElementById('plot-btn').addEventListener('click', function() {
   alert(`Origin: ${origin}, Destination: ${destination}, Initial Orbit: ${initialOrbit} km, Final Orbit: ${finalOrbit} km, Earliest Departure: Year ${departureYear}, Day ${departureDay}, Transfer Type: ${transferType}`);
 });
 
+// Reset butonuna fonksiyon ekle
 document.getElementById('reset-btn').addEventListener('click', function() {
   document.getElementById('origin').selectedIndex = 0;
   document.getElementById('destination').selectedIndex = 0;
