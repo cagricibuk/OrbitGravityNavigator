@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Futuristic Interface</title>
+</head>
+<body>
+
+    <h1>Mission Parameters</h1>
+
+    <div class="container">
+        <!-- 1. Kutu -->
+        <div class="column">
+            <div class="box">
+                <label for="origin">Origin:</label>
+                <select id="origin">
+                    <option value="Kerbin">Kerbin</option>
+                    <option value="Duna">Duna</option>
+                    <option value="Eve">Eve</option>
+                </select>
+            </div>
+            <div class="box">
+                <label for="initial-orbit">Initial Orbit (km):</label>
+                <input type="number" id="initial-orbit" placeholder="100">
+            </div>
+            <div class="box">
+                <label for="departure">Earliest Departure:</label>
+                <input type="number" id="departure-year" placeholder="Year">
+                <input type="number" id="departure-day" placeholder="Day">
+            </div>
+        </div>
+
+        <!-- 2. Kutu -->
+        <div class="column">
+            <div class="box">
+                <label for="destination">Destination:</label>
+                <select id="destination">
+                    <option value="Duna">Duna</option>
+                    <option value="Kerbin">Kerbin</option>
+                    <option value="Eve">Eve</option>
+                </select>
+            </div>
+            <div class="box">
+                <label for="final-orbit">Final Orbit (km):</label>
+                <input type="number" id="final-orbit" placeholder="100">
+            </div>
+            <div class="box">
+                <label for="transfer-type">Transfer Type:</label>
+                <select id="transfer-type">
+                    <option value="Ballistic">Ballistic</option>
+                    <option value="Hohmann">Hohmann</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 3. Kutu (Grafik Alanı) -->
+        <div class="column">
+            <div class="box">
+                <!-- Bu kısma daha sonra grafik ekleyeceksiniz -->
+                <p>Solar system trajectory graphics will be added here later.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

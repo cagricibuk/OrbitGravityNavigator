@@ -1,0 +1,101 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0f0f0f;
+    color: #00FFDD;
+    margin: 0;
+    padding: 0;
+}
+
+/* Başlık Stili */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #00FFDD;
+    text-shadow: 0 0 15px rgba(0, 255, 221, 0.7);
+    margin-top: 20px;
+}
+
+/* Container ve Sütun Stili */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.column {
+    width: 32%; /* Üç eşit sütuna ayırıyoruz */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Her bir div arasında boşluk bırakıyoruz */
+}
+
+/* Kutu Stili */
+.box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid #00FFDD;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 221, 0.3);
+}
+
+/* Form Elemanları */
+input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00FFDD;
+    font-size: 1rem;
+    border-bottom: 2px solid #00FFDD;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="number"]:focus, select:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #FF007A;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #00FFDD;
+    text-shadow: 0 0 5px rgba(0, 255, 221, 0.5);
+}
+
+/* Butonlar */
+button {
+    background-color: #FF007A;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #00FFDD;
+    box-shadow: 0 0 15px rgba(0, 255, 221, 0.7);
+}
+
+/* Responsive Ayar */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .column {
+        width: 100%;
+    }
+}
